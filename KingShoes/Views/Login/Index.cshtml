@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>KingShoes - Login</title>
+
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/css/foundation.css" />
+    <link rel="stylesheet" href="~/Content/css/normalize.css" />
+    <link rel="stylesheet" href="~/Content/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="~/Content/img/favcon.png" />
+    <script src="~/Scripts/vendor/modernizr.js"></script>
+</head>
+<body>
+    <div class="row wrap">
+        <div class="large-7 large-centered columns login-form1">
+            <div id="logo"></div>
+            <form method="get" data-abide>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <label for="login"><i class="fa fa-question fa-lg"></i>Matrícula</label>
+                        <input type="text" class="radius" id="login" name="login" required pattern="integer" />
+                        <small class="error">MATRÍCULA Inválida, tente novamente!</small>
+                    </div>
+                    <div class="large-6 columns">
+                        <label for="senha"><i class="fa fa-key fa-lg"></i>Senha</label>
+                        <input type="password" class="radius" id="senha" name="senha" required />
+                        <small class="error">O campo SENHA deve ser preenchido!</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="switch round">
+                            <h6><i class="fa fa-tags fa-lg"></i>Lembrar-me?</h6>
+                            <input id="remember_me" type="checkbox">
+                            <label for="remember_me">
+                                <span class="switch-on">SIM</span>
+                                <span class="switch-off">NÃO</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="large-6 columns">
+                        <label data-reveal-id="esqueciSenha"><i class="fa fa-question fa-lg"></i>Esqueceu a senha?</label>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="large-5 columns large-centered">
+                        <button class="small-12 button radius" type="submit">ENTRAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--MODAL-->
+    <div id="versao" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h3 id="modalTitle">KingShoes System</h3>
+        <p class="lead">Desenvolvido por:</p><div id="fokus-logo"></div><hr>
+        <p>Contato: <a href="mailto:infokus@tecnologia.com.br?Subject=Suporte%20do%20Sistema">infokus@tecnologia.com.br</a></p>
+        <p>Endereço: Rua 300 Lote B Loja 205</p>
+        <p>Desenvolvedores: Gustavo Fievel, Iagor Moraes, Renan Davidson, Rodolfo Gadelha, Wagner Assis.</p>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+
+    <!--ESQUECI A SENHA-->
+    <div id="esqueciSenha" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h3 id="modalTitle">Esqueceu a senha?</h3><hr>
+        <p>No caso de ter esquecido ou perdido a senha que permite o acesso ao sistema, deverá contactar o seu superior para que seja gerado uma nova senha.</p>
+        <h3 class="right">KingShoes</h3>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2015 InFokus. Todos os direitos reservados.</p>
+        <div class="versao" data-reveal-id="versao" style="cursor:pointer"><i class="fa fa-cogs fa-lg"></i><small id="ver"></small></div>
+    </footer>
+    <script src="~/Scripts/vendor/jquery.js"></script>
+    <script src="~/Scripts/foundation.min.js"></script>
+    <script src="~/Scripts/lembrarme.js"></script>
+    <script src="~/Scripts/versao.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+</body>
+</html>

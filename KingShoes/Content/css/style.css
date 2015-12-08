@@ -1,0 +1,499 @@
+/*DEFINIÇÕES PADRÕES*/
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito-light-webfont.eot');
+    src: url('../fonts/nunito-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nunito-light-webfont.woff2') format('woff2'),
+         url('../fonts/nunito-light-webfont.woff') format('woff'),
+         url('../fonts/nunito-light-webfont.ttf') format('truetype'),
+         url('../fonts/nunito-light-webfont.svg#nunitolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, .welcome, 
+h1, h3, h4, h5, h6, .versao,
+.button,
+.top-bar-section ul li > a, small
+{
+  font-family:'Nunito', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title-form {
+  font-size: 2em;
+  border-bottom: #4466B0 4px solid;
+  border-radius: 3px;
+}
+
+/*
+p, a, h1, span, label, button, footer, section, li, ul, ol {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+*/
+
+#ver {
+  font-size: 1em;
+}
+
+/*Função bem vindo*/
+
+.welcome {
+  font-size: 1em;
+  margin-top: 1.9em;
+  text-align: center;
+  color: white;
+  background-color: #4466B0;
+  border-top: #6d90dd 22px solid;;
+  border-radius: 15px;
+  cursor: default;
+}
+
+.blocos {
+  font-size: 1em;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: white;
+  background-color: #4466B0;
+  border-top: #6d90dd 22px solid;;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.blocos:hover {
+  opacity: 0.5;
+  transition: 300ms;
+}
+
+.cart {
+  margin-top: 37px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  background-color: #4466B0;
+  border-radius: 15px;
+  padding: 30px 20px;
+}
+
+.cart p {
+  font-size: 1.3em;
+  font-weight: bold;
+  position: absolute;
+  top: 3px;
+}
+
+.venda-finalizada {
+  color: #5da423;
+}
+
+.venda-finalizada h4 {
+  color: #5da423;
+  margin-top: 22px;
+}
+
+.welcome p {
+  position: absolute;
+  top: -21px;
+}
+
+.welcome h4 {
+  color: white;
+}
+
+.welcome h6 {
+  color: white;
+}
+
+.welcome a {
+  color: white;
+  cursor: pointer;
+}
+/*BLOCOS DA TELA ADMIN*/
+.blocos p {
+  position: absolute;
+  top: -21px;
+}
+
+.blocos h4 {
+  color: white;
+}
+
+.blocos h6 {
+  color: white;
+}
+
+.blocos a {
+  color: white;
+}
+
+.blocos:first-child {
+  margin-right: 120px;
+}
+
+/*DEFINICÃO SCROLLBAR*/
+body::-webkit-scrollbar {
+  width: 0.7em;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2)
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #4466B0;
+  border-radius: 5px;
+}
+
+/*DEFINIÇÃO DO TOOLTIP*/
+.has-tip {
+  border-bottom: none;
+}
+
+.has-tip:hover {
+  color: white;
+  border-bottom: none;
+}
+
+.tooltip {
+  background-color: #4466B0;
+  border-radius: 5px;
+  max-width: 200px;
+}
+/*DEFINIÇÃO DA LOGO*/
+/*
+
+.mini-logo:hover {
+  src: url(img)
+}
+*/
+
+#logo {
+  width: 256px;
+  height: 256px;
+  background: url(../img/Kinlogosvg.svg) no-repeat center;
+  margin: auto;
+  display: block;
+}
+
+#fokus-logo {
+  background: url(../img/infokus-logo.svg) no-repeat center;
+  width: 130px;
+  height: 50px;
+}
+
+/*DEFINIÇÃO DOS ICONES E LABEL-LABEL ERROR*/
+
+i {
+  margin: 5px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4466B0;
+}
+
+label small {
+  color: #c60f13;
+  font-size: 1em;
+}
+
+.circle-active {
+  font-size: .7em;
+  padding: 6px 10px 5px 10px;
+  background-color: #4466B0;
+  color: white;
+  border-radius: 100%;
+  cursor: default;
+}
+
+.circle-inactive {
+  font-size: .7em;
+  padding: 6px 10px 5px 10px;
+  background-color: #e2e2e2;
+  color: #a3a3a3;
+  border-radius: 100%;
+  cursor: default;
+}
+
+.circle-inactive:hover {
+  color: #a3a3a3;
+}
+
+.error > label > small {
+    background: transparent;
+    color: #c60f13;
+    display: inline;
+    font-size: 1em;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.error small.error {
+    font-size: 0.75rem;
+    font-style: normal;
+    background: #c60f13;
+}
+
+[data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
+  font-style: normal;
+}
+[data-abide] span.error, [data-abide] small.error {
+  display: none;
+}
+
+input:not([type]), input[type="text"], input[type="password"],
+input[type="date"], input[type="datetime"], input[type="datetime-local"], 
+input[type="month"], input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], select, textarea {
+  border-color: #4466B0;
+}
+
+.error input:not([type]), .error input[type="text"], .error input[type="password"],
+.error input[type="date"], .error input[type="datetime"], .error input[type="datetime-local"], 
+ .error input[type="month"], .error input[type="week"], .error input[type="email"], .error input[type="number"], 
+ .error input[type="search"], .error input[type="tel"], .error input[type="time"], .error input[type="url"], .error input[type="color"] {
+  border-color: #c60f13;
+}
+
+/*FORM DO LOGIN E BUTTON*/
+
+.login-form1 {
+  background-color: #f2f2f2;
+  border-radius: 10px;  
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.login-form {
+  background-color: #f2f2f2;
+  border-radius: 10px;  
+  margin-top: 1em;
+  padding: 1em;
+  padding-top: 0;
+}
+
+.btn-form {
+  margin: 0 auto;
+  display: block;
+}
+
+.button {
+  font-size:20px;
+  font-weight: bold;
+}
+
+.space {
+  margin: 5px 0 5px 0;
+}
+
+/*CARRINHO TOTAL*/
+
+.carrinho {
+  border: #5da423 3px solid;
+  border-radius:5px;
+}
+
+.carrinho small,
+.carrinho i {
+  color: #5da423;
+  font-size: 1em;
+}
+
+.carrinho .fa-money {
+  font-size: 2em;
+}
+
+/*BOTÃO de SWITCH*/
+.switch {
+  margin-left: 15px;
+}
+
+.switch-on {
+  position: absolute;
+  left: -55px;
+  top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 9px; }
+
+.switch-off {
+  position: absolute;
+  left: -25px;
+  top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 9px; }
+
+/*RODAPÉ*/
+
+.versao {
+  font-weight: bold;
+  color: white;
+  float: right;
+  margin-right: 1em;
+  padding-right: 0.25em;
+  border: #fff 2px solid;
+  border-radius: 3px;
+  transition: 600ms ease;
+}
+
+footer p {
+  font-weight: bold;
+  color:white;
+  float:left;
+  margin-left: 1em;
+}
+
+.wrap {
+  min-height: calc(100vh - 70px);
+}
+
+.site-footer {
+  height: 70px;
+}
+
+.site-footer {
+  padding-top: 19px;
+  background: #4466B0;
+  border-top: #6287C5 5px solid;
+}
+
+/*DEFINIÇÃO DO TOP-BAR*/
+
+.mini-logo {
+  background: url(../img/icon-menu.svg) no-repeat center;
+  border-color: transparent;
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+/*  margin-top: 0.1em;*/
+  margin-left: 0.2em;
+}
+
+.top-bar {
+  height: 49px;
+  transition: height 300ms ease;
+  border-bottom: #4466B0 4px solid;
+}
+
+.top-bar-section ul li > a {
+  font-size: 0.85em;
+  font-weight: bold;
+  background: #f2f2f2;
+  color: #4466B0;
+  transition: 500ms ease;
+}
+
+.top-bar-section li:last-child {
+  border-left: .3125em  solid #6287C5;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background-color: #f2f2f2;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: #4466B0;
+  color: #FFFFFF;
+  line-height: 2.8125rem;
+  padding: 0 0.9375rem;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: #4466B0;
+}
+
+.top-bar {
+  background: #f2f2f2;
+}
+
+.top-bar.expanded .title-area {
+  background: #f2f2f2;
+}
+
+/*DEFINIÇÃO DO TOP-BAR NO TABLET*/
+
+@media only screen and (max-width: 58.7em) {
+/*MENU TOP-BAR*/
+  
+  .top-bar {
+    box-shadow: rgba(160, 160, 160, 0.69) 0 3px 2px;
+  }
+
+  .top-bar-section {
+    height: 0;
+  }
+  
+  .top-bar-section li:last-child {
+    border-left: 0;
+  }
+  
+  .top-bar-section li:not(.has-form) a:not(.button):hover {
+    padding-left: 3em;
+  }
+  
+  .top-bar .toggle-topbar a {
+    color: #4466B0;
+    transition: 500ms ease;
+  }
+}
+
+/*CORPO DO LOGIN E FUNDO*/
+
+@media only screen and (max-width: 64em) {
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  .login-form1 {
+    margin-top: 0;
+    background-color: transparent;
+  }    
+
+  .site-footer {
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+
+  
+  .site-footer {
+    display: none;
+  }
+  
+  footer {
+    padding:0;
+    background-color: blue;
+    display: none;
+  }
+  
+  footer p {
+    font-size: 12px;
+    text-align: center;
+    float: none;
+    margin-left: 0;
+  }
+  
+  .versao {
+    display: none;
+  }
+  
+  .circle-active {
+    display: none;
+  }
+
+  .circle-inactive {
+    display: none;
+  }
+  
+}

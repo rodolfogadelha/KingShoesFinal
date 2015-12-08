@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    @Styles.Render("~/bundles/foundationCss")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <title>KingShoes</title>
+        <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/Content/css/foundation.css" />
+        <link rel="stylesheet" href="~/Content/css/normalize.css" />
+        <link rel="stylesheet" href="~/Content/css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="img/favcon.png" />
+        <script src="js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+    
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+       
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/foundation")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
